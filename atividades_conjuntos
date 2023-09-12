@@ -1,0 +1,152 @@
+'''
+#exercio 1 ----------------------------------------------------------
+print ('Execicio 1 ----------------------------------------------------------')
+conjunto = {1,2,3,4,5,6,7,8,9,10}
+
+print (conjunto)
+
+'''
+'''
+#exercio 2 ----------------------------------------------------------
+print ('exercicio 2 ----------------------------------------------------------')
+
+conjunto1 = {1,2,3,4,5}
+conjunto2 = {3,4,5,6,7}
+
+uniao = conjunto1.union(conjunto2)
+
+intersecao = conjunto1.intersection(conjunto2)
+
+diferenca = conjunto1.difference(conjunto2)
+
+print("união: ", uniao )
+
+print ("interseção: ", intersecao)
+
+print ("deferença: ", diferenca)
+
+'''
+'''
+#exercio 3 ----------------------------------------------------------
+print ('exercicio 3 ----------------------------------------------------------')
+
+conjunto = {'a','e','i','o','u'}
+
+plavra = (input('insira a palavra: '))
+
+inter = conjunto.intersection(plavra)
+
+print('as vogai presentes são: ', inter)
+
+'''
+'''
+#exercio 4 ----------------------------------------------------------
+print ('exercicio 4 ----------------------------------------------------------')
+
+frutas = {'uva', 'maçã', 'pera', 'banana',}
+
+frutas2 = {'kiwi', 'banana', 'pessego', 'uva'}
+
+comun = frutas.intersection(frutas2)
+
+print ('as frutas que se repetem são: ',comun)
+
+'''
+'''
+#exercio 5 ----------------------------------------------------------
+print ('exercicio 5 ----------------------------------------------------------')
+
+import random
+
+num = set(random.randint(1,50) for _ in range (10))
+
+maior = max(num)
+menor = min(num)
+
+print ('lista de numeros: ',num )
+print ('maior numero: ', maior)
+print ('menor numero: ', menor)
+
+'''
+'''
+#exercio 6 ----------------------------------------------------------
+print ('exercicio 6 ----------------------------------------------------------')
+
+arco = ('vermelho', 'laranja', 'amarelo', 'verde', 'azul', 'anil', 'violeta')
+
+cor = (input('Insira alguma cor do arco iris: '))
+
+if cor in arco :
+    print ('A cor {} esta presente no arco-iris'.format(cor))
+else:
+    print ('A cor {} não esta presente no arco-iris'.format(cor))
+
+'''
+'''
+#exercio 7 ----------------------------------------------------------
+print ('exercicio 7 ----------------------------------------------------------')
+
+diassemana = {"segunda", "terça", "quarta", "quinta", "sexta", "sábado", "domingo"}
+
+diasuteis = {"segunda", "terça", "quarta", "quinta", "sexta"}
+
+remover = diassemana - diasuteis
+
+print("Dias de folga:", remover)
+
+'''
+'''
+#exercio 8 ----------------------------------------------------------
+print ('exercicio 8 ----------------------------------------------------------')
+
+num = set(range (1,21))
+
+par = set(range(2,11,2))
+
+dif = num.difference(par)
+
+print ('a diferença entre os conjuntos é ',dif)
+
+'''
+'''
+#exercio 9 ----------------------------------------------------------
+print ('exercicio 9 ----------------------------------------------------------')
+
+notasaluno = input("Digite as notas do aluno (separadas por vírgula): ")
+
+notas_lista = notasaluno.split(',')
+
+notas = [float(nota) for nota in notas_lista]
+
+media = sum(notas) / len(notas)
+
+if media >= 7:
+    print(f"O aluno foi aprovado com média {media:.2f}!")
+else:
+    print(f"O aluno foi reprovado com média {media:.2f}.")
+
+
+
+'''
+'''
+#exercio 10 ----------------------------------------------------------
+print ('exercicio 10 ----------------------------------------------------------')
+
+def is_prime(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n ** 0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+numeros_primos = {num for num in range(1, 21) if is_prime(num)}
+
+numero_digitado = int(input("Digite um número de 1 a 20: "))
+
+if numero_digitado in numeros_primos:
+    print(f"O número {numero_digitado} é primo!")
+else:
+    print(f"O número {numero_digitado} não é primo.")
+
+'''
