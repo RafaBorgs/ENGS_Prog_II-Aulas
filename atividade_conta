@@ -1,0 +1,14 @@
+conta = int(input("Digite o numero da conta"))
+
+while (conta  != -1):
+        saldo = float (input("Digite o saldo da conta"))
+        if saldo >= 10000:
+            taxa = saldo  *0.001
+        else:
+            taxa = saldo  * 0.003
+
+        novosaldo = saldo  - taxa
+        print("valor dos servicos = {0:.2f}".format(taxa))
+        print("saldo atual = {0:.2f}".format  (novosaldo))
+
+        conta = int(input("digite o número da conta:"))
