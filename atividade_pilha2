@@ -1,0 +1,40 @@
+class EditorDeTexto:
+    def __init__(self):
+        self.texto = ""
+        self.comandos = []
+
+    def inserirTexto(self, texto):
+        self.texto += texto
+        self.comandos.append(("inserir", texto))
+
+    def apagarTexto(self, posicao, tamanho):
+        texto_apagado = self.texto[posicao:posicao + tamanho]
+        self.texto = self.texto[:posicao] + self.texto[posicao + tamanho:]
+        self.comandos.append(("apagar", posicao, texto_apagado))
+
+    def desfazer(self):
+        if self.comandos:
+            comando = self.comandos.pop()
+            if comando[0] == "inserir":
+                texto_inserido = comando[1]
+                self.texto = self.texto[:-len(texto_inserido)]
+            elif comando[0] == "apagar":
+                posicao = comando[1]
+                texto_apagado = comando[2]
+                self.texto = self.texto[:posicao] + texto_apagado + self.texto[posicao:]
+
+    def mostrarTexto(self):
+        print(self.texto)
+
+# Exemplo de uso:
+editor = EditorDeTexto()
+
+editor.inserirTexto("Olá, ")
+editor.inserirTexto("Mundo!")
+editor.mostrarTexto()  # Saída: "Olá, Mundo!"
+
+editor.apagarTexto(0, 5)
+editor.mostrarTexto()  # Saída: "Mundo!"
+
+editor.desfazer()
+editor.mostrarTexto()  # Saída: "Olá, Mundo!"
