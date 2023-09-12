@@ -1,0 +1,50 @@
+'''
+def pfuncao(): #assinatura da função
+    print('Minha primeira função! Que emoção!')
+
+pfuncao()
+
+#Parametros
+def impnome(nome):
+    print(f'Nome: {nome}')
+
+impnome('Rafael')
+impnome('João')
+impnome('pedro')
+
+def montapc(cpu, armazenamento, memoria):
+    print(f'A configuração é: \n\t - CPU: {cpu} \n\t - Armazenamento: {armazenamento}Tb \n\t - Memória: {memoria}Gb')
+
+montapc('Intel Core i9',1 ,500)
+
+#PROCEDIMENTO  -> Função sem retorno
+#FUNÇÃO -> Retorno
+
+def somaDV(valor1, valor2):
+    soma = valor1 + valor2
+    return soma
+
+resultado = somaDV(5,9)
+print ('O valor da soma é: ', resultado)
+print('O valor da soma é: ',somaDV(15,20))
+'''
+'''
+- Escreva uma função que recebe um numero positivo 
+  e retorne a soma de todos os numeros positivos menores
+  ou igual a ele.
+'''
+'''
+def numerointeiro(valor):
+    soma = 0
+    while(valor > 0):
+        soma += valor
+        valor -= 1
+    return soma
+print (numerointeiro(10))
+'''
+
+def fatorial(numero):
+    if numero == 1:
+        return 1
+    return numero * fatorial(numero-1)
+print (fatorial(5))
