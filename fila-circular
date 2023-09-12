@@ -1,0 +1,22 @@
+class FilaCircular:
+    def inicializar(fila, tamanho_max):
+        fila.tamanho_max = tamanho_max
+        fila.fila = [None] * tamanho_max
+        fila.inicio = 0
+        fila.fim = 0
+
+    def enfileirar(fila, elemento):
+        if (fila.fim + 1) % fila.tamanho_max == fila.inicio:
+            raise Exception("A fila está cheia")
+        fila.fila[fila.fim] = elemento
+        fila.fim = (fila.fim + 1) % fila.tamanho_max
+
+    def desenfileirar(fila):
+        if fila.inicio == fila.fim:
+            raise Exception("A fila está vazia")
+        elemento = fila.fila[fila.inicio]
+        fila.inicio = (fila.inicio + 1) % fila.tamanho_max
+        return elemento
+
+    def tamanho(fila):
+        return (fila.fim - fila.inicio + fila.tamanho_max) % fila.tamanho_max
