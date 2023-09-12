@@ -1,0 +1,13 @@
+class FilaPrioridades:
+    def inicializar(fila):
+        fila.fila = []
+
+    def inserir(fila, elemento, prioridade):
+        fila.fila.append((elemento, prioridade))
+        fila.fila.sort(key=lambda x: x[1])
+
+    def remover_maior_prioridade(fila):
+        if not fila.fila:
+            raise Exception("A fila de prioridades está vazia")
+        elemento, _ = fila.fila.pop()
+        return elemento
