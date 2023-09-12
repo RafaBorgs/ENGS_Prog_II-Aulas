@@ -1,0 +1,171 @@
+'''
+#exercicio 1 ----------------------------------------------------------
+print ('exercicio 1 ----------------------------------------------------------')
+
+dicionario = {}
+
+
+dicionario['1:'] = 1
+dicionario['2:'] = 2
+
+print(dicionario)
+
+'''
+'''
+#exercicio 2 ----------------------------------------------------------
+print ('exercicio 2 ----------------------------------------------------------')
+
+
+dados = {
+    "nome": "Rafael",
+    "idade": 18,
+    "cidade": "Cantagalo"
+}
+
+print(dados)
+
+
+'''
+'''
+#exercicio 3 ----------------------------------------------------------
+print ('exercicio 3 ----------------------------------------------------------')
+
+alimentos = {
+    "5kg Arroz": "R$20,00",
+    "1L Leite": 'R$7,00',
+    "Duzia de Ovos": "R$10,00"
+}
+
+print(alimentos)
+
+'''
+'''
+#exercicio 4 ----------------------------------------------------------
+print ('exercicio 4 ----------------------------------------------------------')
+
+capitais = {
+    "São Paulo": "São Paulo",
+    "Rio de Janeiro": "Rio de Janeiro",
+    "Paraná": "Curitiba"
+}
+
+estado = input("Digite o nome de um estado: ")
+
+if estado in capitais:
+    capital = capitais[estado]
+    print(f"A capital do estado {estado} é {capital}.")
+else:
+    print("Estado não encontrado no dicionário.")
+
+
+'''
+'''
+#exercicio 5 ----------------------------------------------------------
+print ('exercicio 5 ----------------------------------------------------------')
+
+cidades = {
+    "São Paulo": 12000000,
+    "Rio de Janeiro": 6500000,
+    "Belo Horizonte": 2500000,
+    "Salvador": 2900000,
+    "Brasília": 3100000
+}
+
+
+maiorpopulacao = max(cidades, key=cidades.get)
+populacao = cidades[maiorpopulacao]
+
+print(f"A cidade com a maior população é {maiorpopulacao}, com {populacao} habitantes.")
+
+
+'''
+'''
+#exercicio 6 ----------------------------------------------------------
+print ('exercicio 6 ----------------------------------------------------------')
+
+alimentos = {
+    "laranja": "37 kcal",
+    "ovo frito": "240 kcal",
+    "batata doce": "77 kcal"
+}
+
+alimento = input("Digite o nome de um alimento: ")
+
+if alimento in alimentos:
+    caloria = alimentos[alimento]
+    print(f"O valor calorico do alimento {alimento} é {caloria}.")
+else:
+    print("alimento não encontrado no dicionário.")
+
+'''
+'''
+#exercicio 7 ----------------------------------------------------------
+print ('exercicio 7 ----------------------------------------------------------')
+
+animais = {
+    "Leão": "mamífero",
+    "Águia": "ave",
+    "Cobra": "réptil",
+    "Baleia": "mamífero",
+    "Tartaruga": "réptil"
+}
+
+for animal in animais:
+    print(animal)
+
+
+
+'''
+'''
+#exercicio 8 ----------------------------------------------------------
+print ('exercicio 8 ----------------------------------------------------------')
+
+bandeiras = {
+    "Brasil": "bandeira_brasil",
+    "Estados Unidos": "bandeira_eua",
+    "França": "bandeira_franca",
+    "Japão": "bandeira_japao",
+    "Austrália": "bandeira_australia"
+}
+
+
+for pais in bandeiras:
+    print(pais)
+
+
+'''
+'''
+#exercicio 9 ----------------------------------------------------------
+print ('exercicio 9 ----------------------------------------------------------')
+
+frutas= {
+    "Maçã": "vermelha",
+    "Laranja": 'laranja',
+    "Pera": "verde",
+    'Banana': "amarela",
+    "Abacaxi":'amarelo'
+}
+
+print(frutas)
+
+
+'''
+'''
+#exercicio 10 ----------------------------------------------------------
+print ('exercicio 10 ----------------------------------------------------------')
+
+jogos= {
+    "Futebol": 22,
+    "Xadrez": 2,
+    "Basquete": 10
+}
+jogo = input("Digite o nome de um jogo: ")
+
+if jogo in jogos:
+    necessario = jogos[jogo]
+    print(f"O jogo {jogo} requer {necessario} jogadores.")
+else:
+    print("Jogo não encontrado no dicionário.")
+
+
+'''
