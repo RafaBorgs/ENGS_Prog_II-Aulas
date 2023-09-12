@@ -1,0 +1,129 @@
+'''
+#exercicio 1 ----------------------------------------------------------
+print ('exercicio 1 ----------------------------------------------------------')
+
+tupla = (1,2,3,4,5)
+
+print (tupla)
+'''
+'''
+#exercicio 2 ----------------------------------------------------------
+print ('exercicio 2 ----------------------------------------------------------')
+
+paises = ("Brasil", "Estados Unidos", "Japão")
+
+segundo = paises[1]
+
+print("O segundo país é:", segundo)
+
+'''
+'''
+#exercicio 3 ----------------------------------------------------------
+print ('exercicio 3 ----------------------------------------------------------')
+
+
+conta = (50.00, 10.00, 60.00)
+
+refeição = conta[0]
+serviço = conta[1]
+total = conta [2]
+
+print (f'O valor a pagar é:\nValor da Refeição: {refeição}\n'
+       f'valor do serviço:{serviço}\n'
+       f'Valor Total:{total}')
+
+
+'''
+'''
+#exercicio 4 ----------------------------------------------------------
+print ('exercicio 4 ----------------------------------------------------------')
+
+nomes = ("Rafael", "Diego", "Enzo", "Bruno", "Itamar")
+
+numero = int(input("Digite um número entre 1 e 5: "))
+
+if 1 <= numero <= 5:
+    nome = nomes[numero - 1]
+    print(f"O nome que corresponde ao número {numero} é {nome}.")
+else:
+    print("Número fora do intervalo válido.")
+
+'''
+'''
+#exercicio 5 ----------------------------------------------------------
+print ('exercicio 5 ----------------------------------------------------------')
+
+notas_aluno = (4.3, 9.4, 7.7, 5.5, 8.3)
+
+media = sum(notas_aluno) / len(notas_aluno)
+
+print(f"A média das notas do aluno é {media:.1f}")
+
+'''
+'''
+#exercicio 6 ----------------------------------------------------------
+print ('exercicio 6 ----------------------------------------------------------')
+
+cores = ("vermelho", "laranja", "amarelo", "verde", "azul", "anil", "violeta")
+
+cor = input("Digite uma cor: ")
+
+if cor in cores:
+    print(f"A cor {cor} está no arco-íris!")
+else:
+    print(f"A cor {cor} não faz parte do arco-íris.")
+
+'''
+'''
+#exercicio 7 ----------------------------------------------------------
+print ('exercicio 7 ----------------------------------------------------------')
+
+temperaturas = (28, 25, 29, 27, 26, 30, 31)
+
+maxima = max(temperaturas)
+minima = min(temperaturas)
+
+print(f"Temperatura máxima da semana: {maxima}°C")
+print(f"Temperatura mínima da semana: {minima}°C")
+
+'''
+'''
+#exercicio 8 ----------------------------------------------------------
+print ('exercicio 8 ----------------------------------------------------------')
+
+frutas= (
+    "Maçã:vermelha","Laranja : laranja","Pera : verde","Banana: amarela","Abacaxi:amarelo"
+)
+
+print(frutas)
+
+'''
+'''
+#exercicio 9 ----------------------------------------------------------
+print ('exercicio 9 ----------------------------------------------------------')
+
+num = tuple(range(1,11))
+
+num2 = tuple(range(5, 16))
+
+conjunto1 = set(num)
+conjunto2 = set(num2)
+
+intersecao = conjunto1 & conjunto2
+print("Interseção entre as duas tuplas:", intersecao)
+
+'''
+'''
+#exercicio 10 ----------------------------------------------------------
+print ('exercicio 10 ----------------------------------------------------------')
+
+
+alfabeto = tuple("abcdefghijklmnopqrstuvwxyz")
+
+vogais = ("a", "e", "i", "o", "u")
+
+diferenca = tuple(letra for letra in alfabeto if letra not in vogais)
+
+print("Diferença entre as duas tuplas:", diferenca)
+
+'''
